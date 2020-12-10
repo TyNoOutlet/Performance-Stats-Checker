@@ -1,0 +1,3 @@
+game:GetService("ReplicatedStorage").PingCheck.OnServerEvent:Connect(function(plr, ping)
+	game:GetService("ReplicatedStorage").PingCheck:FireClient(plr, ping)
+end)
