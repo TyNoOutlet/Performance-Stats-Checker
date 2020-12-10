@@ -3,7 +3,6 @@ game:GetService("ReplicatedStorage").PingCheck.OnClientEvent:Connect(function(ol
 	script.Parent.Text = "Ping: " .. tostring(ping) .. " ms"
 end)
 
-while true do
+game:GetService("RunService").RenderStepped:Connect(function()
 	game:GetService("ReplicatedStorage").PingCheck:FireServer(os.clock())
-	wait(1)
-end
+end)
