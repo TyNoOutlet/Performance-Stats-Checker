@@ -1,4 +1,4 @@
-while true do
+game:GetService("RunService").RenderStepped:Connect(function()
 	local tik = os.clock()
 	local tok = tik + 1
 	local inc = 0
@@ -9,4 +9,4 @@ while true do
 	end
 	script.Parent.Text = "FPS: " .. tostring(inc)
 	inc = 0
-end
+end)
