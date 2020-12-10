@@ -1,0 +1,12 @@
+while true do
+	local tik = os.clock()
+	local tok = tik + 1
+	local inc = 0
+	while tik < tok do
+		game:GetService("RunService").Heartbeat:Wait()
+		tik = os.clock()
+		inc += 1
+	end
+	script.Parent.Text = "FPS: " .. tostring(inc)
+	inc = 0
+end
