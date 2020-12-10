@@ -1,0 +1,9 @@
+game:GetService("ReplicatedStorage").PingCheck.OnClientEvent:Connect(function(oldping)
+	local ping = math.floor((os.clock() - oldping) * 1000)
+	script.Parent.Text = "Ping: " .. tostring(ping) .. " ms"
+end)
+
+while true do
+	game:GetService("ReplicatedStorage").PingCheck:FireServer(os.clock())
+	wait(1)
+end
